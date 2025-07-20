@@ -1,0 +1,83 @@
+{
+  "name": "dify-chat-cli",
+  "version": "1.0.0",
+  "description": "专为开发者设计的Dify知识库管理CLI工具，支持知识库创建、文档检索和数据采集清洗",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "chat": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.tsx",
+    "build": "rm -rf dist && node esbuild.config.mjs",
+    "start": "node dist/index.js",
+    "lint": "eslint src --ext .ts,.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write src/**/*.{ts,tsx}",
+    "prepublishOnly": "pnpm build",
+    "postinstall": "patch-package"
+  },
+  "keywords": [
+    "dify",
+    "cli",
+    "knowledge-base",
+    "react",
+    "ink",
+    "typescript",
+    "developer-tools",
+    "documentation"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "find-up": "^6.3.0",
+    "fs-extra": "^11.1.1",
+    "glob": "^10.3.0",
+    "ink": "^4.4.1",
+    "ink-markdown": "^1.0.4",
+    "ink-select-input": "^6.2.0",
+    "ink-spinner": "^5.0.0",
+    "ink-text-input": "^5.0.1",
+    "ora": "^7.0.1",
+    "react": "^18.2.0",
+    "signal-exit": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/find-up": "^4.0.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.8.0",
+    "@types/react": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "esbuild": "^0.19.5",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
+    "prettier": "^3.0.3",
+    "tsx": "^4.0.0",
+    "typescript": "^5.2.2",
+    "yoga-layout-prebuilt": "^1.10.0"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanfang0054/dify-chat-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evanfang0054/dify-chat-cli/issues"
+  },
+  "homepage": "https://github.com/evanfang0054/dify-chat-cli#readme"
+}

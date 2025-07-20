@@ -1,0 +1,40 @@
+{
+  "openai": {
+    "apiKey": "your-openai-api-key-here",
+    "baseUrl": "https://api.openai.com",
+    "model": "gpt-3.5-turbo",
+    "maxTokens": 4000,
+    "temperature": 0.7
+  },
+  "dify": {
+    "apiKey": "your-dify-api-key-here",
+    "baseUrl": "https://api.dify.ai",
+    "knowledgeBaseId": "your-knowledge-base-id",
+    "timeout": 30000
+  },
+  "scan": {
+    "includePatterns": [
+      "**/*.{js,ts,tsx,jsx,py,java,go,rs,php,rb}",
+      "**/*.{md,txt,json,yml,yaml}"
+    ],
+    "excludePatterns": [
+      "node_modules/**",
+      "dist/**",
+      "build/**",
+      ".git/**",
+      "**/*.test.{js,ts,tsx,jsx}",
+      "**/*.spec.{js,ts,tsx,jsx}",
+      "**/*.min.js",
+      "**/*.d.ts"
+    ],
+    "ignoreFiles": [".gitignore", ".difyignore"],
+    "maxFileSize": 5242880
+  },
+  "generation": {
+    "style": "technical",
+    "includeExamples": true,
+    "language": "zh-CN",
+    "includeTOC": true,
+    "includeAPI": true
+  }
+}
